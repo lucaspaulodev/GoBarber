@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { FiPower } from 'react-icons/fi'
+import { FiPower, FiClock } from 'react-icons/fi'
 
-import { Container, Header, HeaderContainer, Profile } from './styles'
+import { Container, Header, HeaderContainer, Profile, Content, Schedule, Calendar, NextAppointment } from './styles'
 
 import logoImg from '../../assets/logo.svg'
 import { useAuth } from '../../hooks/auth'
@@ -28,6 +28,31 @@ const Dashboard: React.FC = () => {
           </button>
         </HeaderContainer>
       </Header>
+
+      <Content>
+        <Schedule>
+          <h1>Horários agendados</h1>
+          <p>
+            <span>Hoje</span>
+            <span>Hoje</span>
+            <span>Hoje</span>
+          </p>
+
+          <NextAppointment>
+            <strong>Atendimento a seguir</strong>
+            <div>
+              <img src="" alt=""/>
+              <strong>Lucaas Paulo</strong>
+              <span>
+                <FiClock/>
+                08:00
+              </span>
+            </div>
+          </NextAppointment>
+        </Schedule>
+
+        <Calendar/>
+      </Content>
     </Container>
   )
 }
