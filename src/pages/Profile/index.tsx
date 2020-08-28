@@ -74,14 +74,14 @@ const Profile: React.FC = () => {
 
             api.patch('/users/avatar', data).then((response) => {
                 updateUser(response.data)
-                
+
                 addToast({
                     type: 'success',
                     title: 'Avatar atualizado!',
                 });
             });
         }
-    }, [addToast])
+    }, [addToast, updateUser])
 
     return(
         <Container>
