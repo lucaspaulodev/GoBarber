@@ -14,6 +14,6 @@ describe('SigIn Page', () => {
     
     const { debug } = render(<SignIn/>);
 
-    debug()
+    debug();
   });
 });
